@@ -1,4 +1,4 @@
-name: 'JUnit to Slack Test Reporter'
+name: 'JUnit to Slack Test Reporter-V2'
 description: 'Detailed JUnit Test Report sent to a Slack channel'
 branding:
   icon: 'file-text'  
