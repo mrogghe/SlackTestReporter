@@ -82,9 +82,9 @@ try {
             ) {
             console.log("building abbreviated string for " + content.elements[0].attributes.name);
             let SHORTOUTPUT = "" + content.elements[0].attributes.name + " ALL PASSED:";
-            for (let i = 0; i < parseInt(content.elements[0].attributes.tests); i++) {
-            SHORTOUTPUT += " :green_apple:";
-            }
+
+            SHORTOUTPUT += " :large_green_circle:";
+
             SHORTOUTPUT += "\r\n";
             FULLSTR += SHORTOUTPUT;
         }
@@ -102,16 +102,16 @@ try {
               var testCaseNameResult = item.attributes.name;
               testCaseNameResult += getTestCaseResult(item);
               if (testCaseNameResult.includes('skipped')){
-                testCaseNameResult = ':pineapple: ' + testCaseNameResult;
+                testCaseNameResult = ':large_yellow_circle: ' + testCaseNameResult;
               }
               else if (testCaseNameResult.includes('failure')){
                 var errorMessage = item.elements[0].attributes.message;
                 var shortMessage = errorMessage.split(/\r?\n/)[0];
-                testCaseNameResult = ':apple: ' + testCaseNameResult + ' ' 
+                testCaseNameResult = ':red_circle: ' + testCaseNameResult + ' '
                   + shortMessage;
               }
               else {
-                testCaseNameResult = ':green_apple: ' + testCaseNameResult;
+                testCaseNameResult = ':large_green_circle: ' + testCaseNameResult;
               }
               testCaseNameResult = "    " + testCaseNameResult;
               testCaseNameResult += "\r\n";
